@@ -14,6 +14,9 @@
 		0598E80B1D2079EA000E7676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0598E80A1D2079EA000E7676 /* Assets.xcassets */; };
 		0598E80E1D2079EA000E7676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0598E80C1D2079EA000E7676 /* LaunchScreen.storyboard */; };
 		0598E8191D2079EA000E7676 /* BackgroundVideoDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598E8181D2079EA000E7676 /* BackgroundVideoDemoTests.m */; };
+		0598E8251D2090C9000E7676 /* BackgroundVideoObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598E8241D2090C9000E7676 /* BackgroundVideoObjC.m */; };
+		0598E8271D2090DF000E7676 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0598E8261D2090DF000E7676 /* AVKit.framework */; };
+		0598E8291D2090E5000E7676 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0598E8281D2090E5000E7676 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		0598E8141D2079EA000E7676 /* BackgroundVideoDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundVideoDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0598E8181D2079EA000E7676 /* BackgroundVideoDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundVideoDemoTests.m; sourceTree = "<group>"; };
 		0598E81A1D2079EA000E7676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0598E8231D2090C9000E7676 /* BackgroundVideoObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundVideoObjC.h; sourceTree = "<group>"; };
+		0598E8241D2090C9000E7676 /* BackgroundVideoObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundVideoObjC.m; sourceTree = "<group>"; };
+		0598E8261D2090DF000E7676 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		0598E8281D2090E5000E7676 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0598E8291D2090E5000E7676 /* AVFoundation.framework in Frameworks */,
+				0598E8271D2090DF000E7676 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,8 @@
 		0598E7F21D2079E9000E7676 = {
 			isa = PBXGroup;
 			children = (
+				0598E8281D2090E5000E7676 /* AVFoundation.framework */,
+				0598E8261D2090DF000E7676 /* AVKit.framework */,
 				0598E7FD1D2079EA000E7676 /* BackgroundVideoDemo */,
 				0598E8171D2079EA000E7676 /* BackgroundVideoDemoTests */,
 				0598E7FC1D2079EA000E7676 /* Products */,
@@ -85,6 +96,8 @@
 				0598E8021D2079EA000E7676 /* AppDelegate.m */,
 				0598E8041D2079EA000E7676 /* ViewController.h */,
 				0598E8051D2079EA000E7676 /* ViewController.m */,
+				0598E8231D2090C9000E7676 /* BackgroundVideoObjC.h */,
+				0598E8241D2090C9000E7676 /* BackgroundVideoObjC.m */,
 				0598E8071D2079EA000E7676 /* Main.storyboard */,
 				0598E80A1D2079EA000E7676 /* Assets.xcassets */,
 				0598E80C1D2079EA000E7676 /* LaunchScreen.storyboard */,
@@ -212,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0598E8061D2079EA000E7676 /* ViewController.m in Sources */,
+				0598E8251D2090C9000E7676 /* BackgroundVideoObjC.m in Sources */,
 				0598E8031D2079EA000E7676 /* AppDelegate.m in Sources */,
 				0598E8001D2079EA000E7676 /* main.m in Sources */,
 			);
@@ -402,6 +416,7 @@
 				0598E81F1D2079EA000E7676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0598E8201D2079EA000E7676 /* Build configuration list for PBXNativeTarget "BackgroundVideoDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +425,7 @@
 				0598E8221D2079EA000E7676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
