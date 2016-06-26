@@ -17,20 +17,22 @@
 * *Mutes the video and does not allow it to interrupt other audio services. For example, it does not stop music playing from your music app or a VoIP call*
 
 ##### Instructions:
-* Have an awesome video that you want to show as your background 
-* Drag and drop **`BackgroundVideo.swift`** file to your Project navigator
+1. Have an awesome video that you want to show as your background 
+2. Drag and drop **`BackgroundVideo.swift`** file to your Project navigator
 
-<img src="Screenshots/dragdrop1.png">  
-* Drag and drop the video to your project and make sure to check **`Copy items if needed`** as well as **`Add to targets`** (This is because the object will look at your app's main bunddle)
+	<img src="Screenshots/dragdrop1.png">  
 
-<img src="Screenshots/dragdrop2.png"> <img src="Screenshots/instruction.png">  
-* Go to the view controller where you want to display the video and declare an instance.
+3. Drag and drop the video to your project and make sure to check **`Copy items if needed`** as well as **`Add to targets`** (This is because the object will look at your app's main bunddle)
 
-```swift
-var backgroundPlayer : BackgroundVideo? // Declare an instance of BackgroundVideo called backgroundPlayer
-``` 
 
-* In your **`viewDidLoad()`** function, initialize your instance with the view controller you're using and the name of the `video file with it's extension` as parameters (make sure you seperate your name and extension by a period). In the following code I'm passing the same view controller where I declared my instance, namely **`self`**. Then, just call the function **`setUpBackground()`** on your instance.
+	<img src="Screenshots/dragdrop2.png"> <img src="Screenshots/instruction.png"> 
+
+4. Go to the view controller where you want to display the video and declare an instance.
+	```swift
+		var backgroundPlayer : BackgroundVideo? // Declare an instance of BackgroundVideo called backgroundPlayer
+	```
+
+5. In your **`viewDidLoad()`** function, initialize your instance with the view controller you're using and the name of the `video file with it's extension` as parameters (make sure you seperate your name and extension by a period). In the following code I'm passing the same view controller where I declared my instance, namely **`self`**. Then, just call the function **`setUpBackground()`** on your instance.
 
 ```swift
  override func viewDidLoad() {
@@ -41,4 +43,4 @@ var backgroundPlayer : BackgroundVideo? // Declare an instance of BackgroundVide
     }
 ```
 
-##### That's it, you're ready to go :)!
+##### That's it, you're ready to go slightsmile emoticon!
