@@ -24,12 +24,15 @@
 3. Drag and drop the video to your project and make sure to check **`Copy items if needed`** as well as **`Add to targets`** (This is because the object will look at your app's main bunddle)
 
 <img src="Screenshots/dragdrop2.png"> <img src="Screenshots/instruction.png">  
-3. Go to the view controller where you want to display the video and declare an instance
-```swift
+4. Go to the view controller where you want to display the video and declare an instance.
+
+       ```swift
 var backgroundPlayer : BackgroundVideo? // Declare an instance of BackgroundVideo called backgroundPlayer
-```
-4. In your **`viewDidLoad()`** function, initialize your instance with the view controller you're using and the name of the `video file with it's extension` as parameters (make sure you seperate your name and extension by a period). In the following code I'm passing the same view controller where I declared my instance, namely **`self`**. Then, just call the function **`setUpBackground()`** on your instance. 
-```swift
+``` 
+
+5. In your **`viewDidLoad()`** function, initialize your instance with the view controller you're using and the name of the `video file with it's extension` as parameters (make sure you seperate your name and extension by a period). In the following code I'm passing the same view controller where I declared my instance, namely **`self`**. Then, just call the function **`setUpBackground()`** on your instance.
+
+       ```swift
  override func viewDidLoad() {
         super.viewDidLoad()
         // Initializing your instance 
@@ -38,4 +41,6 @@ var backgroundPlayer : BackgroundVideo? // Declare an instance of BackgroundVide
     }
 
 ```
+
+
 ##### That's it, you're ready to go :)!
