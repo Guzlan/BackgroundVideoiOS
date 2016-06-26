@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "BackgroundVideoObjC.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) BackgroundVideoObjC *backgroundVideo;
 
 @end
 
@@ -17,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.backgroundVideo = [[BackgroundVideoObjC alloc] initOnViewController:self withVideoURL:[NSURL URLWithString:@"test.mp4"]];
+    [self.backgroundVideo setUpBackground];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -12,30 +12,37 @@ static BOOL hasBeenUsed = false;
 
 @implementation BackgroundVideoObjC
 
-- (void)initOnViewController:(UIViewController *)onViewController withVideoURL:(NSURL *)url {
-    self.viewController = onViewController;
+- (id)initOnViewController:(UIViewController *)onViewController withVideoURL:(NSURL *)url {
+    self = [super init];
     
-    // parse the video string to split it into name and extension
-    NSArray *videoNameAndExtension = [url.absoluteString componentsSeparatedByString:@"."];
-    if (videoNameAndExtension.count == 2) {
-        __weak NSString *videoName = videoNameAndExtension[0];
-        __weak NSString *videoExtension = videoNameAndExtension[1];
+    if (self) {
+        viewController = onViewController;
         
-        if ([[NSBundle mainBundle] URLForResource:videoName withExtension:videoExtension]) {
-            self.videoURL = url;
-            // initialize our player with our fetched video url
-            self.backgroundPlayer = [AVPlayer playerWithURL:self.videoURL];
+        // parse the video string to split it into name and extension
+        NSArray *videoNameAndExtension = [url.absoluteString componentsSeparatedByString:@"."];
+        if (videoNameAndExtension.count == 2) {
+            __weak NSString *videoName = videoNameAndExtension[0];
+            __weak NSString *videoExtension = videoNameAndExtension[1];
+            
+            if ([[NSBundle mainBundle] URLForResource:videoName withExtension:videoExtension]) {
+                videoURL = url;
+                // initialize our player with our fetched video url
+                self.backgroundPlayer = [AVPlayer playerWithURL:videoURL];
+                [self setUpBackground];
+            }
+            else {
+                NSLog(@"Invalid Video");
+            }
         }
         else {
-            NSLog(@"Invalid Video");
+            NSLog(@"Wrong video name format");
         }
     }
-    else {
-        NSLog(@"Wrong video name format");
-    }
+    
+    return self;
 }
 
-- (void)deinit {
+- (void)dealloc {
     if (hasBeenUsed) {
         [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
         [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
@@ -50,9 +57,9 @@ static BOOL hasBeenUsed = false;
     AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.backgroundPlayer];
     playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill; // preserve aspect ratio and resize to fill screen
     playerLayer.zPosition = -1; // set position behind anything in our view
-    playerLayer.frame = self.viewController.view.frame; // set our player frame to our view's frame
+    playerLayer.frame = viewController.view.frame; // set our player frame to our view's frame
     
-    [self.viewController.view.layer addSublayer:playerLayer];
+    [viewController.view.layer addSublayer:playerLayer];
     
     // prevent video from disturbing audio services from other apps
     @try {

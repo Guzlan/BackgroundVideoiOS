@@ -14,14 +14,14 @@ typedef enum BackgroundVideoErrors {
     InvalidVideo
 } ErrorType;
 
-@interface BackgroundVideoObjC : NSObject
+@interface BackgroundVideoObjC : NSObject {
+    NSURL *videoURL;
+    UIViewController *viewController;
+}
 
 @property (strong, nonatomic) AVPlayer *backgroundPlayer;
-@property (strong, nonatomic) NSURL *videoURL;
-@property (weak, nonatomic) UIViewController *viewController;
 
-- (void)initOnViewController:(UIViewController *)onViewController withVideoURL:(NSURL *)url;
-- (void)setUpBackground;
+- (id)initOnViewController:(UIViewController *)onViewController withVideoURL:(NSURL *)url;
 
 - (void)pause;
 - (void)play;
