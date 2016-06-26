@@ -1,7 +1,7 @@
 # BackgroundVideo-iOS
 #### *This is a class which lets you add a video background to iOS app views. This is seen at login views of famous apps like spotify, tumbler and Vimeo*
 #####This is how they look like.. 
-![alt text](Screenshots/filename.SpotifyGif.gif "Spotify")
+![alt text](Screenshots/SpotifyGif.gif "Spotify")
 ##### It does the following: 
 -*Creates an AVPlayer object for you and plays a video from your app bundle*
 
