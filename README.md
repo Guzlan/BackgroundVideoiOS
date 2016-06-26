@@ -8,6 +8,8 @@
 ##### It does the following: 
 * *Creates an AVPlayer object for you and plays a video from your app bundle*
 
+* *Handles video looping*
+
 * *Handles app going to background and coming back to foreground*
 
 * *Handles seguing away and back again to the view that plays the video*
