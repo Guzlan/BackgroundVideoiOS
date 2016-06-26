@@ -1,4 +1,4 @@
-# BackgroundVideo-iOS
+# BackgroundVideoiOS
 #### *This is an Object/Class which lets you add a video background to iOS app views. This is seen at login views of some famous apps like Spotify, tumbler and Vimeo*
 
 ##### This is how they look.. 
