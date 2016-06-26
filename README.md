@@ -21,7 +21,7 @@
 2. Drag and drop **`BackgroundVideo.swift`** file to your Project navigator
 
 <img src="Screenshots/dragdrop1.png">  
-3. Drag and drop the video to your project and make sure to check *`Copy items if needed`* as well as *`Add to targets`* (This is because the object will look at your app's main bunddle)
+3. Drag and drop the video to your project and make sure to check **`Copy items if needed`** as well as **`Add to targets`** (This is because the object will look at your app's main bunddle)
 
 <img src="Screenshots/dragdrop2.png"> <img src="Screenshots/instruction.png">  
 3. Go to the view controller where you want to display the video and declare an instance
