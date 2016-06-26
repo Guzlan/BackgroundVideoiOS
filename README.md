@@ -43,4 +43,4 @@
     }
 ```
 
-##### That's it, you're ready to go slightsmile :)!
+##### That's it, you're ready to go :)!
