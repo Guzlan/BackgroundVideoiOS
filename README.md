@@ -54,6 +54,7 @@
 ```objective-c
 - (void)viewDidLoad {
     self.backgroundVideo = [[BackgroundVideoObjC alloc] initOnViewController:self withVideoURL:@"test.mp4"];
+    [self.backgroundVideo setUpBackground];
 }
 ```
 
