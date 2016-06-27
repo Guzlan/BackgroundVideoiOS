@@ -12,20 +12,21 @@ static BOOL hasBeenUsed = false;
 
 @implementation BackgroundVideoObjC
 
-- (id)initOnViewController:(UIViewController *)onViewController withVideoURL:(NSURL *)url {
+- (id)initOnViewController:(UIViewController *)onViewController withVideoURL:(NSString *)url {
     self = [super init];
     
     if (self) {
         viewController = onViewController;
         
         // parse the video string to split it into name and extension
-        NSArray *videoNameAndExtension = [url.absoluteString componentsSeparatedByString:@"."];
+        NSArray *videoNameAndExtension = [url componentsSeparatedByString:@"."];
         if (videoNameAndExtension.count == 2) {
             __weak NSString *videoName = videoNameAndExtension[0];
             __weak NSString *videoExtension = videoNameAndExtension[1];
             
             if ([[NSBundle mainBundle] URLForResource:videoName withExtension:videoExtension]) {
-                videoURL = url;
+                
+                videoURL = [[NSBundle mainBundle] URLForResource:videoName withExtension:videoExtension];
                 // initialize our player with our fetched video url
                 self.backgroundPlayer = [AVPlayer playerWithURL:videoURL];
                 [self setUpBackground];

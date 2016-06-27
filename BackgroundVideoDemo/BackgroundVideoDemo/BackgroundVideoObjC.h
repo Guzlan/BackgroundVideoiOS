@@ -21,7 +21,7 @@ typedef enum BackgroundVideoErrors {
 
 @property (strong, nonatomic) AVPlayer *backgroundPlayer;
 
-- (id)initOnViewController:(UIViewController *)onViewController withVideoURL:(NSURL *)url;
+- (id)initOnViewController:(UIViewController *)onViewController withVideoURL:(NSString *)url;
 
 - (void)pause;
 - (void)play;
