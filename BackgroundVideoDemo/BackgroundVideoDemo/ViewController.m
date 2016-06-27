@@ -20,9 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.backgroundVideo = [[BackgroundVideoObjC alloc] initOnViewController:self withVideoURL:[NSURL URLWithString:@"test.mp4"]];
-    [self.backgroundVideo setUpBackground];
-    
+    self.backgroundVideo = [[BackgroundVideoObjC alloc] initOnViewController:self withVideoURL:[NSURL URLWithString:@"test.mp4"]];    
 }
 
 - (void)didReceiveMemoryWarning {

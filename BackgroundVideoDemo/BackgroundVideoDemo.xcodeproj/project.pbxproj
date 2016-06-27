@@ -17,6 +17,7 @@
 		0598E8251D2090C9000E7676 /* BackgroundVideoObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598E8241D2090C9000E7676 /* BackgroundVideoObjC.m */; };
 		0598E8271D2090DF000E7676 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0598E8261D2090DF000E7676 /* AVKit.framework */; };
 		0598E8291D2090E5000E7676 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0598E8281D2090E5000E7676 /* AVFoundation.framework */; };
+		0598E82B1D20A2D1000E7676 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0598E82A1D209DFA000E7676 /* test.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0598E82B1D20A2D1000E7676 /* test.mp4 in Resources */,
 				0598E80E1D2079EA000E7676 /* LaunchScreen.storyboard in Resources */,
 				0598E80B1D2079EA000E7676 /* Assets.xcassets in Resources */,
 				0598E8091D2079EA000E7676 /* Main.storyboard in Resources */,
