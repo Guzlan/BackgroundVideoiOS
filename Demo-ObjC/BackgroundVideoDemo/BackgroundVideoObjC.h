@@ -10,10 +10,6 @@
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-typedef enum BackgroundVideoErrors {
-    InvalidVideo
-} ErrorType;
-
 @interface BackgroundVideoObjC : NSObject {
     NSURL *videoURL;
     UIViewController *viewController;
@@ -22,6 +18,7 @@ typedef enum BackgroundVideoErrors {
 @property (strong, nonatomic) AVPlayer *backgroundPlayer;
 
 - (id)initOnViewController:(UIViewController *)onViewController withVideoURL:(NSString *)url;
+- (void)setUpBackground;
 
 - (void)pause;
 - (void)play;
