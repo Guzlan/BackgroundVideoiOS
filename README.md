@@ -46,14 +46,16 @@
 ##### Instructions for Objective-C:
 1. Do steps 1-3 from the Swift steps above, but instead of dragging **`BackgroundVideo.swift`**, drag and drop **`BackgroundVideoObjC.h`** and **`BackgroundVideoObjC.m`**.
 2. Go to the view controller where you want to display the video and declare an instance.
-    ```objective-c
-        @property (strong, nonatomic) BackgroundVideoObjC *backgroundVideo;
-    ```
+```objective-c
+@property (strong, nonatomic) BackgroundVideoObjC *backgroundVideo;
+```
 
 3. Same as 5 from Swift steps, except use this code: 
-    ```objective-c
-        self.backgroundVideo = [[BackgroundVideoObjC alloc] initOnViewController:self withVideoURL:@"test.mp4"];
-    ```
+```objective-c
+- (void)viewDidLoad {
+    self.backgroundVideo = [[BackgroundVideoObjC alloc] initOnViewController:self withVideoURL:@"test.mp4"];
+}
+```
 
 
 ##### That's it, you're ready to go :)!
