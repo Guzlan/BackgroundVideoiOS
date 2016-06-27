@@ -31,7 +31,7 @@
 	```swift
 		var backgroundPlayer : BackgroundVideo? // Declare an instance of BackgroundVideo called backgroundPlayer
 	```
-`
+
 5. In your **`viewDidLoad()`** method, initialize your instance with the view controller you're using and the name of the `video file with it's extension` as parameters (make sure you seperate your name and extension by a period). In the following code I'm passing the same view controller where I declared my instance, namely **`self`**. Then, just call the function **`setUpBackground()`** on your instance.
 
 ```swift
@@ -42,18 +42,18 @@
         backgroundPlayer?.setUpBackground() 
     }
 ```
-`
+
 ##### Instructions for Objective-C:
 1. Do steps 1-3 from the Swift steps above, but instead of dragging **`BackgroundVideo.swift`**, drag and drop **`BackgroundVideoObjC.h`** and **`BackgroundVideoObjC.m`**.
 2. Go to the view controller where you want to display the video and declare an instance.
     ```objective-c
         @property (strong, nonatomic) BackgroundVideoObjC *backgroundVideo;
     ```
-`
+
 3. Same as 5 from Swift steps, except use this code: 
     ```objective-c
         self.backgroundVideo = [[BackgroundVideoObjC alloc] initOnViewController:self withVideoURL:@"test.mp4"];
     ```
-`
+
 
 ##### That's it, you're ready to go :)!
