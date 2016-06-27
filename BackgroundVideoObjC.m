@@ -29,7 +29,6 @@ static BOOL hasBeenUsed = false;
                 videoURL = [[NSBundle mainBundle] URLForResource:videoName withExtension:videoExtension];
                 // initialize our player with our fetched video url
                 self.backgroundPlayer = [AVPlayer playerWithURL:videoURL];
-                [self setUpBackground];
             }
             else {
                 NSLog(@"Invalid Video");
