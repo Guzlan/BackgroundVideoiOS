@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Initializing your instance
-        backgroundPlayer = BackgroundVideo(onViewController: self, withVideoURL: "test.mp4") // Passing self and video name with extension
+        backgroundPlayer = BackgroundVideo(on: self, withVideoURL: "test.mp4") // Passing self and video name with extension
         backgroundPlayer?.setUpBackground()
         // Do any additional setup after loading the view, typically from a nib.
     }
