@@ -2,6 +2,7 @@
 //  BackgroundVideo.swift
 //
 //  Created by Amr Guzlan on 2016-06-25.
+//  Fork modified by Doron Katz on 2017-03-03
 //  Copyright © 2016 Amro Gazlan. All rights reserved.
 //
 
@@ -10,19 +11,20 @@ import AVKit
 import AVFoundation
 
 enum BackgroundVideoErrors: Error {
-    case invalidVideo
+    case invalidVideo(message:String)
+    case missingVideo(message:String)
 }
 
 class BackgroundVideo {
     // creating an instance of an AVPlayer for background video 
     var backGroundPlayer : AVPlayer?
     var videoURL: URL?
-    var viewController: UIViewController?
+    var view: UIView?
     var hasBeenUsed: Bool = false
     
     
-    init (on viewController: UIViewController, withVideoURL URL: String) {
-        self.viewController = viewController
+    init (on view: UIView, withVideoURL URL: String) throws {
+        self.view = view
         
         // parse the video string to split it into name and extension
         let videoNameAndExtension:[String]? = URL.characters.split{$0 == "."}.map(String.init)
@@ -37,9 +39,11 @@ class BackgroundVideo {
                 }
             }
         } else {
-            print("Wrong video name format")
+            throw BackgroundVideoErrors.invalidVideo(message: "Wrong Video Type")
         }
     }
+    
+    
     
     
     deinit{
@@ -55,12 +59,17 @@ class BackgroundVideo {
     /*
      setUpBackground is a function that should be called in viewDidLoad to load a local background video to play as your background
      */
-    func setUpBackground(){
+    func setUpBackground() throws{
         self.backGroundPlayer?.actionAtItemEnd = .none
         self.backGroundPlayer?.isMuted = true // mute the background video....
         
         //add the video to your view ..
-        let loginView: UIView = self.viewController!.view//get our view controllers view
+        
+        guard self.view != nil else{
+            throw BackgroundVideoErrors.missingVideo(message: "View is not setup")
+        }
+        
+        let loginView: UIView = self.view! //get our view
         let playerLayer = AVPlayerLayer(player: self.backGroundPlayer)
         playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill // preserve aspect ratio and resize to fill screen
         playerLayer.zPosition = -1 // set it's possition behined anything in our view

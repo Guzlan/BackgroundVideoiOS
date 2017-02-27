@@ -14,9 +14,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Initializing your instance
-        backgroundPlayer = BackgroundVideo(on: self, withVideoURL: "test.mp4") // Passing self and video name with extension
-        backgroundPlayer?.setUpBackground()
-        // Do any additional setup after loading the view, typically from a nib.
+        do{
+            try backgroundPlayer = BackgroundVideo(on: self.view, withVideoURL: "test.mp4") // Passing self and video name with extension
+            try backgroundPlayer?.setUpBackground()
+            // Do any additional setup after loading the view, typically from a nib.
+        }catch{
+            print("error/issue with adding video")
+        }
     }
 
     override func didReceiveMemoryWarning() {
