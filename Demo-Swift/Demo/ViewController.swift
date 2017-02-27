@@ -3,6 +3,7 @@
 //  Demo
 //
 //  Created by Amr Guzlan on 2016-06-26.
+//  Fork modified by Doron Katz on 2017-03-03
 //  Copyright © 2016 Amro Gazlan. All rights reserved.
 //
 
@@ -14,9 +15,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Initializing your instance
-        backgroundPlayer = BackgroundVideo(on: self, withVideoURL: "test.mp4") // Passing self and video name with extension
-        backgroundPlayer?.setUpBackground()
-        // Do any additional setup after loading the view, typically from a nib.
+        do{
+            try backgroundPlayer = BackgroundVideo(on: self.view, withVideoURL: "test.mp4") // Passing self and video name with extension
+            try backgroundPlayer?.setUpBackground()
+        }catch BackgroundVideoErrors.invalidVideo(message: "Video is invalid"){
+            print("Video is invalid")
+        }catch BackgroundVideoErrors.missingVideo(message: "View is missing"){
+            print("Video is missing")
+        }catch{
+            print("Unknown error")
+        }
     }
 
     override func didReceiveMemoryWarning() {
