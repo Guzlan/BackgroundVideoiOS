@@ -12,11 +12,11 @@ static BOOL hasBeenUsed = false;
 
 @implementation BackgroundVideoObjC
 
-- (id)initOnViewController:(UIViewController *)onViewController withVideoURL:(NSString *)url {
+- (id)initOnView:(UIView *)onView withVideoURL:(NSString *)url {
     self = [super init];
     
     if (self) {
-        viewController = onViewController;
+        view = onView;
         
         // parse the video string to split it into name and extension
         NSArray *videoNameAndExtension = [url componentsSeparatedByString:@"."];
@@ -57,9 +57,9 @@ static BOOL hasBeenUsed = false;
     AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.backgroundPlayer];
     playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill; // preserve aspect ratio and resize to fill screen
     playerLayer.zPosition = -1; // set position behind anything in our view
-    playerLayer.frame = viewController.view.frame; // set our player frame to our view's frame
+    playerLayer.frame = view.frame; // set our player frame to our view's frame
     
-    [viewController.view.layer addSublayer:playerLayer];
+    [view.layer addSublayer:playerLayer];
     
     // prevent video from disturbing audio services from other apps
     @try {

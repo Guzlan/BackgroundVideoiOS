@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C51558A21D1FD1C400F3EA7D"
-               BuildableName = "Demo.app"
-               BlueprintName = "Demo"
-               ReferencedContainer = "container:Demo.xcodeproj">
+               BlueprintIdentifier = "0598E7FA1D2079EA000E7676"
+               BuildableName = "BackgroundVideoDemo.app"
+               BlueprintName = "BackgroundVideoDemo"
+               ReferencedContainer = "container:BackgroundVideoDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,24 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0598E8131D2079EA000E7676"
+               BuildableName = "BackgroundVideoDemoTests.xctest"
+               BlueprintName = "BackgroundVideoDemoTests"
+               ReferencedContainer = "container:BackgroundVideoDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C51558A21D1FD1C400F3EA7D"
-            BuildableName = "Demo.app"
-            BlueprintName = "Demo"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            BlueprintIdentifier = "0598E7FA1D2079EA000E7676"
+            BuildableName = "BackgroundVideoDemo.app"
+            BlueprintName = "BackgroundVideoDemo"
+            ReferencedContainer = "container:BackgroundVideoDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +65,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C51558A21D1FD1C400F3EA7D"
-            BuildableName = "Demo.app"
-            BlueprintName = "Demo"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            BlueprintIdentifier = "0598E7FA1D2079EA000E7676"
+            BuildableName = "BackgroundVideoDemo.app"
+            BlueprintName = "BackgroundVideoDemo"
+            ReferencedContainer = "container:BackgroundVideoDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C51558A21D1FD1C400F3EA7D"
-            BuildableName = "Demo.app"
-            BlueprintName = "Demo"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            BlueprintIdentifier = "0598E7FA1D2079EA000E7676"
+            BuildableName = "BackgroundVideoDemo.app"
+            BlueprintName = "BackgroundVideoDemo"
+            ReferencedContainer = "container:BackgroundVideoDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

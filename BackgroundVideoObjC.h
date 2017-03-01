@@ -12,12 +12,12 @@
 
 @interface BackgroundVideoObjC : NSObject {
     NSURL *videoURL;
-    UIViewController *viewController;
+    UIView *view;
 }
 
 @property (strong, nonatomic) AVPlayer *backgroundPlayer;
 
-- (id)initOnViewController:(UIViewController *)onViewController withVideoURL:(NSString *)url;
+- (id)initOnView:(UIView *)onView withVideoURL:(NSString *)url;
 - (void)setUpBackground;
 
 - (void)pause;

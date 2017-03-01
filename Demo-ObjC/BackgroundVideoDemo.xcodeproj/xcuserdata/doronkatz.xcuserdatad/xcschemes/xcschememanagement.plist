@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Demo.xcscheme</key>
+		<key>BackgroundVideoDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C51558A21D1FD1C400F3EA7D</key>
+		<key>0598E7FA1D2079EA000E7676</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0598E8131D2079EA000E7676</key>
 		<dict>
 			<key>primary</key>
 			<true/>
