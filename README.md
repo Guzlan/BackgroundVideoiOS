@@ -3,8 +3,8 @@
 
 ##### This is how they look.. 
 
-<img align="center" src="Screenshots/SpotifyGif.gif" width="30%" height="auto"> 
-<img align="center" src="Screenshots/VimeoGif.gif" width="30%" height="auto"> <img  align="center" src="Screenshots/TumblerGif.gif" width="30%" height="auto">
+<img align="center" src="Screenshots/SpotifyGif.gif" width="25%" height="auto"> 
+<img align="center" src="Screenshots/VimeoGif.gif" width="25%" height="auto"> <img  align="center" src="Screenshots/TumblerGif.gif" width="25%" height="auto">
 
 ##### It does the following: 
 * *Creates an AVPlayer object for you and plays a video from your app bundle*
