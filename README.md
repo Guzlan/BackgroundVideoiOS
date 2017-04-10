@@ -2,10 +2,9 @@
 #### *This is an Object/Class which lets you add a background video to iOS app views. This is seen at login views of some famous apps like Spotify, tumbler and Vimeo*
 
 ##### This is how they look.. 
-
-<img  src="Screenshots/SpotifyGif.gif" width="32%" height="auto"> 
-<img  src="Screenshots/VimeoGif.gif" width="32%" height="auto"> <img   src="Screenshots/TumblerGif.gif" width="32%" height="auto">
-
+<section>
+<img  src="Screenshots/SpotifyGif.gif" width="32%" height="auto"> <img  src="Screenshots/VimeoGif.gif" width="32%" height="auto"> <img   src="Screenshots/TumblerGif.gif" width="32%" height="auto">
+</section>
 ##### It does the following: 
 * *Creates an AVPlayer object for you and plays a video from your app bundle*
 
