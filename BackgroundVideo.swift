@@ -25,17 +25,18 @@ class BackgroundVideo {
         self.viewController = viewController
         
         // parse the video string to split it into name and extension
-        let videoNameAndExtension:[String]? = URL.characters.split{$0 == "."}.map(String.init)
-        if videoNameAndExtension!.count == 2 {
-            if let videoName = videoNameAndExtension?[0] , let videoExtension = videoNameAndExtension?[1] {
-                if let url = Bundle.main.url(forResource: videoName, withExtension: videoExtension) {
-                    self.videoURL = url
-                    // initialize our player with our fetched video url
-                    self.backGroundPlayer = AVPlayer(url: self.videoURL!)
-                } else {
-                    print(BackgroundVideoErrors.invalidVideo)
-                }
+        let videoNameAndExtension = URL.split(separator: ".").map({String($0)})
+        if videoNameAndExtension.count == 2 {
+            let videoName = videoNameAndExtension[0]
+            let videoExtension = videoNameAndExtension[1]
+            if let url = Bundle.main.url(forResource: videoName, withExtension: videoExtension) {
+                self.videoURL = url
+                // initialize our player with our fetched video url
+                self.backGroundPlayer = AVPlayer(url: self.videoURL!)
+            } else {
+                print(BackgroundVideoErrors.invalidVideo)
             }
+            
         } else {
             print("Wrong video name format")
         }
@@ -62,7 +63,7 @@ class BackgroundVideo {
         //add the video to your view ..
         let loginView: UIView = self.viewController!.view//get our view controllers view
         let playerLayer = AVPlayerLayer(player: self.backGroundPlayer)
-        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill // preserve aspect ratio and resize to fill screen
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill // preserve aspect ratio and resize to fill screen
         playerLayer.zPosition = -1 // set it's possition behined anything in our view
         playerLayer.frame = loginView.frame // set our player frame to our view's frame
         loginView.layer.addSublayer(playerLayer)
@@ -85,11 +86,11 @@ class BackgroundVideo {
         // call the background video again if your application goes to background and foreground again
         NotificationCenter.default.addObserver(self, selector: #selector(self.loopVideo), name: .UIApplicationWillEnterForeground, object: nil)
         self.hasBeenUsed = true
-    
+        
     }
     
     // A function that will restarts the video for the purpose of looping
-   @objc private func loopVideo() {
+    @objc private func loopVideo() {
         self.backGroundPlayer?.seek(to: kCMTimeZero)
         self.backGroundPlayer?.play()
     }
@@ -97,12 +98,12 @@ class BackgroundVideo {
     // incase you want to pause or play the video at any moment
     func pause() {
         self.backGroundPlayer?.pause()
-
+        
     }
     func play() {
         self.backGroundPlayer?.play()
         
     }
     
-
+    
 }
